@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,7 +18,7 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-        <img alt="logo" src="../img/Logo.png" width="auto" height="auto" />
+        <img alt="logo" src="./img/Logo.png" width="auto" height="auto" />
       </div>
       <div class="main-navbar">
         <a href="#" class="active"><span>Accueil</span></a>
@@ -46,7 +46,7 @@
           <button class="btn-signup modal-btn">je m'inscris</button>
         </div>
         <div class="hero-img">
-          <img src="../img/bg_img.jpg" alt="img" />
+          <img src="./img/bg_img.jpg" alt="img" />
         </div>
         <button class="btn-signup modal-btn">je m'inscris</button>
       </div>
@@ -60,6 +60,7 @@
             <form
             id="form"
               name="reserve"
+              enctype="multipart/form-data"
               action="index.html"
               method="get"
             >
@@ -77,37 +78,40 @@
                 /><br />
               </div>
               <!-- LAST NAME -->
-              <div class="formData">
+              <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
                 <label>Nom</label><br />
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
+                  placeholder="Nom"
                 /><br />
               </div>
               <!-- EMAIL -->
-              <div class="formData">
+              <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
                 <label>E-mail</label><br />
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="E-mail"
                 /><br />
               </div>
               <!-- BIRTHDATE -->
-              <div class="formData">
+              <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
                 <label>Date de naissance</label><br />
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  placeholder="Date de naissance"
                 /><br />
               </div>
               <!-- TOURNAMENTS -->
-              <div class="formData">
+              <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
                 <label
                   >À combien de tournois GameOn avez-vous déjà participé
                   ?</label
@@ -119,13 +123,15 @@
                   name="quantity"
                   min="0"
                   max="99"
+                  
                 />
               </div>
               <!-- LOCATIONS -->
               <p class="text-label">
                 A quel tournoi souhaitez-vous participer cette année ?
               </p>
-              <div class="formData">
+              <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville."
+               data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -194,7 +200,8 @@
                 >
               </div>
 
-              <div class="formData">
+              <div class="formData" data-error="Vous devez accepter les conditions d'utilisation."
+              data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -223,11 +230,12 @@
           </div>
         </div>
       </div>
+      
     </main>
     <footer>
       <p class="copyrights">Copyright 2014 - 2022, GameOn Inc.</p>
     </footer>
-    <script src="../js/modal.js"></script>
-    <script src="../GameOn-website-FR/js/formFieldsValidation.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/formFieldsValidation.js"></script>
   </body>
 </html>
