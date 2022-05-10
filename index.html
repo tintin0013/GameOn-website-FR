@@ -66,7 +66,7 @@
             >
             
               <!-- FIRST NAME -->
-              <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+              <div id="firstError" class="formData" data-error="" data-error-visible="true">
                 <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
@@ -77,7 +77,7 @@
                 /><br />
               </div>
               <!-- LAST NAME -->
-              <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+              <div id="lastError" class="formData" data-error="" data-error-visible="true">
                 <label>Nom</label><br />
                 <input
                   class="text-control"
@@ -88,7 +88,7 @@
                 /><br />
               </div>
               <!-- EMAIL -->
-              <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
+              <div id="emailError" class="formData" data-error="" data-error-visible="true">
                 <label>E-mail</label><br />
                 <input
                   class="text-control"
@@ -99,7 +99,7 @@
                 /><br />
               </div>
               <!-- BIRTHDATE -->
-              <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
+              <div id="birthdateError" class="formData" data-error="" data-error-visible="true">
                 <label>Date de naissance</label><br />
                 <input
                   class="text-control"
@@ -110,7 +110,7 @@
                 /><br />
               </div>
               <!-- TOURNAMENTS -->
-              <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
+              <div id="quantityError" class="formData" data-error="" data-error-visible="true">
                 <label
                   >À combien de tournois GameOn avez-vous déjà participé
                   ?</label
@@ -120,8 +120,7 @@
                   class="text-control"
                   id="quantity"
                   name="quantity"
-                  min="0"
-                  max="99"
+                  
                   
                 />
               </div>
@@ -129,8 +128,8 @@
               <p class="text-label">
                 A quel tournoi souhaitez-vous participer cette année ?
               </p>
-              <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville."
-               data-error-visible="false">
+              <div class="formData" id="allLocationsError" data-error=""
+               data-error-visible="true">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -199,12 +198,13 @@
                 >
               </div>
 
-              <div class="formData" data-error="Vous devez accepter les conditions d'utilisation."
-              data-error-visible="false">
+              <div id="checkboxError" class="formData" data-error=""
+              data-error-visible="true">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
+                  name="checkbox1"
                   checked
                 />
                 <label class="checkbox2-label" for="checkbox1" required>

@@ -239,15 +239,15 @@ input {
 .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
-
+/*
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/*
+
  .formData[data-error-visible="false"] .text-control {
   border: 2px solid green;
-} 
-*/
+} */
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
@@ -504,12 +504,11 @@ footer {
   .hero-headline {
     font-size: 5rem;
   }
-  .content{
-    margin-top: 70px;
-  }
 }
 
-
+.content{
+  margin-top: 70px;
+}
 
 @media screen and (max-width: 800px) {
   .header-logo img {
